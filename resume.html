@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likith B - Resume</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+    <!-- Control bar for standalone preview, hidden in print mode -->
+    <div class="no-print" id="controlBar">
+        <span class="no-print-text">Resume Preview (ATS-Style)</span>
+        <button class="no-print-btn" onclick="window.print()">Download / Print PDF</button>
+    </div>
+
+    <header>
+        <h1>Likith B</h1>
+        <div class="contact-info">
+            <span>Bangalore, India</span>
+            <span>|</span>
+            <span><a href="mailto:likith301206@gmail.com">likith301206@gmail.com</a></span>
+            <span>|</span>
+            <span><a href="https://linkedin.com/in/likith-b-10206b333" target="_blank">LinkedIn</a></span>
+            <span>|</span>
+            <span><a href="https://github.com/Likith11011" target="_blank">GitHub</a></span>
+            <span>|</span>
+            <span><a href="https://leetcode.com/u/Likith_1215/" target="_blank">LeetCode</a></span>
+            <span>|</span>
+            <span><a href="https://www.hackerrank.com/profile/blikithbtech24" target="_blank">HackerRank</a></span>
+        </div>
+    </header>
+
+    <!-- EDUCATION SECTION -->
+    <section>
+        <h2>Education</h2>
+        
+        <div class="resume-content">
+            <div class="resume-row">
+                <span>Alliance University</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="resume-subrow">
+                <span>Bachelor of Technology (B.Tech) - Artificial Intelligence & Machine Learning</span>
+                <span>2024 — 2028</span>
+            </div>
+            <ul>
+                <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Machine Learning, Database Management Systems.</li>
+            </ul>
+        </div>
+
+        <div class="resume-content">
+            <div class="resume-row">
+                <span>Surana Independent P.U College</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="resume-subrow">
+                <span>Pre-University Course (12th / PUC) - Science (PCMB)</span>
+                <span>2022 — 2024</span>
+            </div>
+            <ul>
+                <li><strong>Academic Performance:</strong> Secured 94.5% overall percentage in PUC exams.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section>
+        <h2>Projects</h2>
+
+        <div class="resume-content">
+            <div class="resume-row">
+                <span>MemoryOS (AI Contextual Search & Knowledge Second Brain)</span>
+                <span>Vercel / Render</span>
+            </div>
+            <div class="resume-subrow">
+                <span>Solo Developer</span>
+                <span>May 2026 — July 2026</span>
+            </div>
+            <ul>
+                <li>Designed and built an AI-powered contextual semantic memory retrieval system (second brain) that processes notes, PDFs, code snippets, and web articles.</li>
+                <li>Implemented semantic search using sentence-transformers (all-MiniLM-L6-v2) for generating 384-dimensional text embeddings stored in a ChromaDB vector database.</li>
+                <li>Orchestrated RAG (Retrieval-Augmented Generation) Chat using Groq API with LLaMA 3.3 70B, enabling real-time Q&A grounded in uploaded context.</li>
+                <li>Created features like exam revision flashcards, project ideas Kanban boards, JWT authentication, and automated AI tag generation.</li>
+                <li><strong>Tech Stack:</strong> Next.js 14, React, TypeScript, FastAPI, Python, ChromaDB, PostgreSQL, Groq LLaMA, Vercel, Render.</li>
+            </ul>
+        </div>
+
+        <div class="resume-content">
+            <div class="resume-row">
+                <span>PromptDNA (AI Prompt Intelligence & Coaching System)</span>
+                <span>Vercel / Render</span>
+            </div>
+            <div class="resume-subrow">
+                <span>Solo Developer</span>
+                <span>April 2026 — June 2026</span>
+            </div>
+            <ul>
+                <li>Developed an AI-powered prompt analysis and refining application that evaluates prompt quality and coaches users in LLM communication.</li>
+                <li>Implemented a hybrid scoring algorithm (0-100) combining deterministic heuristic text rules with qualitative LLaMA 3 evaluations.</li>
+                <li>Designed an analytics dashboard visualizing historical prompt score improvements, weakness heatmaps, and category distributions.</li>
+                <li>Built a prompt optimizer that rewrites vague prompt structures into high-performance, structured instruction models.</li>
+                <li><strong>Tech Stack:</strong> Next.js, React, TypeScript, FastAPI, Python, Groq LLaMA 3, PostgreSQL, Vercel, Render.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skills-item">
+                <strong>Programming Languages:</strong> Python, C++, SQL
+            </div>
+            <div class="skills-item">
+                <strong>AI/ML & Data Science:</strong> Machine Learning (Supervised/Unsupervised, Regression, Classification), Data Analysis & Visualization (Feature Engineering, Cleaning)
+            </div>
+            <div class="skills-item">
+                <strong>Libraries & Frameworks:</strong> Pandas, NumPy, Matplotlib, Seaborn
+            </div>
+            <div class="skills-item">
+                <strong>Databases & Tools:</strong> MySQL, Jupyter Notebook, Google Colab, VS Code
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section>
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+            <li><strong>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</strong> — Issued by Oracle (2025)</li>
+            <li><strong>Data Analytics Job Simulation</strong> — Issued by Deloitte (via Forage) (2026)</li>
+            <li><strong>TCS iON Career Edge – Young Professional Program</strong> — Issued by TCS (2026)</li>
+            <li><strong>Data Structures and Algorithms</strong> — Issued by NPTEL (2026)</li>
+            <li><strong>Introduction to Database Systems</strong> — Issued by NPTEL (2026)</li>
+        </ul>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section>
+        <h2>Achievements</h2>
+        <ul>
+            <li>Participated in MemoryVerse AI 2026 organised by Unstop (2026)</li>
+        </ul>
+    </section>
+
+    <script>
+        // Adjust styling if embedded in an iframe on the main portfolio page
+        if (window.self !== window.top) {
+            document.body.classList.add('embedded');
+            document.getElementById('controlBar').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* --- ATS RESUME SYSTEM TYPOGRAPHY & COLORS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.45;
+    padding: 1.5in 1.0in; /* Standard margins */
+    max-width: 8.5in; /* Standard Letter width */
+    margin: 0 auto;
+    font-size: 10pt;
+}
+
+/* Header Info Layout */
+header {
+    text-align: center;
+    border-bottom: 2px solid #111827;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+header h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #111827;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    font-size: 9.5pt;
+    color: #374151;
+}
+
+.contact-info a {
+    color: #111827;
+    text-decoration: none;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 18px;
+}
+
+section h2 {
+    font-size: 12pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid #9ca3af;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+/* Flex row details */
+.resume-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 10.5pt;
+}
+
+.resume-subrow {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    color: #4b5563;
+    margin-bottom: 6px;
+    font-size: 9.5pt;
+}
+
+.resume-content {
+    margin-bottom: 12px;
+}
+
+.resume-content p {
+    color: #374151;
+    margin-bottom: 4px;
+    font-size: 9.5pt;
+}
+
+/* Bullet list */
+ul {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+
+li {
+    margin-bottom: 3px;
+    color: #1f2937;
+    font-size: 9.5pt;
+}
+
+/* Technical Skills Layout */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skills-item {
+    font-size: 9.5pt;
+}
+
+.skills-item strong {
+    font-weight: 700;
+}
+
+/* Certifications Layout */
+.cert-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.cert-list li {
+    margin-bottom: 4px;
+}
+
+/* Hide controls on Print */
+.no-print {
+    background: #f3f4f6;
+    border-bottom: 1px solid #d1d5db;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.no-print-btn {
+    background: #111827;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 9pt;
+}
+
+.no-print-btn:hover {
+    background: #374151;
+}
+
+.no-print-text {
+    font-size: 9.5pt;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+/* Adapt standard page view when viewed on screen inside iframe */
+@media screen {
+    body.embedded {
+        padding: 0.5in;
+        max-width: 100%;
+        font-size: 9pt;
+    }
+    
+    body.embedded header h1 {
+        font-size: 18pt;
+    }
+    
+    body.embedded section h2 {
+        font-size: 11pt;
+    }
+    
+    body.embedded .resume-row {
+        font-size: 9.5pt;
+    }
+}
+
+/* Adjustments for pure print output */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent;
+        color: #000000;
+    }
+}
