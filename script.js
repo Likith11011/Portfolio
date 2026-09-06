@@ -67,7 +67,7 @@ function initNeuralCanvas() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(56, 189, 248, ${this.baseAlpha})`;
+            ctx.fillStyle = `rgba(52, 211, 153, ${this.baseAlpha})`;
             ctx.fill();
         }
     }
@@ -96,7 +96,7 @@ function initNeuralCanvas() {
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`;
+                    ctx.strokeStyle = `rgba(52, 211, 153, ${alpha})`;
                     ctx.lineWidth = 0.75;
                     ctx.stroke();
                 }
@@ -113,7 +113,7 @@ function initNeuralCanvas() {
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = `rgba(129, 140, 248, ${alpha})`;
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${alpha})`;
                     ctx.lineWidth = 1;
                     ctx.stroke();
                 }
