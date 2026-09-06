@@ -3,264 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Likith B - AI/ML Student & Developer Portfolio. Exploring the intersections of Deep Learning, algorithms, and future-ready AI.">
-    <title>Likith B | AI/ML Student & Developer Portfolio</title>
+    <meta name="description" content="Likith B - AI/ML Student & Developer Portfolio. Exploring Deep Learning, Neural Network Architectures, and Next-Gen AI.">
+    <title>Likith B — AI/ML Student & Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- BACKGROUND GLOWS -->
-    <div class="bg-glow"></div>
+    <!-- INTERACTIVE NEURAL CANVAS BACKGROUND -->
+    <canvas id="neuralCanvas"></canvas>
+    <div class="grid-overlay"></div>
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
 
-    <!-- HEADER / NAVIGATION -->
-    <header>
-        <div class="container navbar">
-            <a href="#" class="logo">Likith B</a>
+    <!-- FLOATING PILL NAVBAR -->
+    <header class="header-wrapper">
+        <nav class="floating-nav">
+            <a href="#home" class="nav-brand">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                Likith B
+            </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" onclick="openResumeModal(event)" class="tech-tag" style="background: var(--gradient-accent); color: var(--bg-primary); padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; border: none; cursor: pointer;">Resume</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#credentials" class="nav-link">Credentials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </div>
+            <button class="nav-cta" onclick="openResumeModal(event)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Resume
+            </button>
+        </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="container hero-grid">
-            <div class="hero-left">
-                <div class="hero-welcome">Hello, I'm</div>
-                <h1 class="hero-name">Likith B</h1>
-                <div class="hero-title">AI / ML Student</div>
-                <p class="hero-tagline">Exploring the intersections of Deep Learning, algorithms, and future-ready AI.</p>
-                <p class="hero-desc">I am a 3rd-year Artificial Intelligence & Machine Learning student based in Bangalore, passionate about exploring neural network architectures and statistical modeling.</p>
+            
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-pulse"></span>
+                    3rd-Year AI/ML Student @ Alliance University
+                </div>
                 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#" onclick="openResumeModal(event)" class="btn btn-secondary">View Resume</a>
+                <h1 class="hero-name">Likith B</h1>
+                
+                <div class="hero-title-typed">
+                    <span id="typedTitle"></span><span class="typed-cursor">|</span>
+                </div>
+                
+                <p class="hero-description">
+                    I am a 3rd-year Artificial Intelligence & Machine Learning student based in Bangalore, passionate about exploring neural network architectures and statistical modeling.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore Flagship Projects
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <button class="btn btn-secondary" onclick="openResumeModal(event)">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        View Resume
+                    </button>
+                    <button class="btn btn-ghost" onclick="copyEmail()">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy Email
+                    </button>
                 </div>
 
-                <div class="social-badges">
-                    <a href="https://github.com/Likith11011" target="_blank" class="badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <div class="hero-socials">
+                    <a href="https://github.com/Likith11011" target="_blank" class="social-chip" title="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         GitHub
                     </a>
-                    <a href="https://linkedin.com/in/likith-b-10206b333" target="_blank" class="badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://linkedin.com/in/likith-b-10206b333" target="_blank" class="social-chip" title="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         LinkedIn
                     </a>
-                    <a href="https://leetcode.com/u/Likith_1215/" target="_blank" class="badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.102 17.93l-2.697 2.607c-.466.451-1.211.451-1.677 0l-4.51-4.359a1.157 1.157 0 0 1 0-1.62l1.677-1.62c.466-.451 1.211-.451 1.677 0l1.97 1.9a.18.18 0 0 0 .25 0l5.803-5.608a1.157 1.157 0 0 1 1.677 0l1.677 1.62a1.158 1.158 0 0 1 0 1.62l-7.667 7.408zm-9.845-9.61a1.158 1.158 0 0 1 0-1.62l1.677-1.62a1.157 1.157 0 0 1 1.677 0l6.818 6.59c.466.45.466 1.18 0 1.62l-1.677 1.62a1.158 1.158 0 0 1-1.677 0l-6.818-6.59z"/></svg>
+                    <a href="https://leetcode.com/u/Likith_1215/" target="_blank" class="social-chip" title="LeetCode">
+                        <svg viewBox="0 0 24 24"><path d="M16.102 17.93l-2.697 2.607c-.466.451-1.211.451-1.677 0l-4.51-4.359a1.157 1.157 0 0 1 0-1.62l1.677-1.62c.466-.451 1.211-.451 1.677 0l1.97 1.9a.18.18 0 0 0 .25 0l5.803-5.608a1.157 1.157 0 0 1 1.677 0l1.677 1.62a1.158 1.158 0 0 1 0 1.62l-7.667 7.408zm-9.845-9.61a1.158 1.158 0 0 1 0-1.62l1.677-1.62a1.157 1.157 0 0 1 1.677 0l6.818 6.59c.466.45.466 1.18 0 1.62l-1.677 1.62a1.158 1.158 0 0 1-1.677 0l-6.818-6.59z"/></svg>
                         LeetCode
                     </a>
-                    <a href="https://www.hackerrank.com/profile/blikithbtech24" target="_blank" class="badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.062 6.551l-4.385-4.385a.965.965 0 0 0-.683-.284H7.006c-.256 0-.501.102-.683.284L1.938 6.551a.965.965 0 0 0-.284.683v9.531c0 .256.102.501.284.683l4.385 4.385c.182.182.427.284.683.284h9.988c.256 0 .501-.102.683-.284l4.385-4.385a.965.965 0 0 0 .284-.683V7.234c0-.256-.102-.501-.284-.683zm-5.068 7.37H7.006V10.08h9.988v3.841z"/></svg>
+                    <a href="https://www.hackerrank.com/profile/blikithbtech24" target="_blank" class="social-chip" title="HackerRank">
+                        <svg viewBox="0 0 24 24"><path d="M22.062 6.551l-4.385-4.385a.965.965 0 0 0-.683-.284H7.006c-.256 0-.501.102-.683.284L1.938 6.551a.965.965 0 0 0-.284.683v9.531c0 .256.102.501.284.683l4.385 4.385c.182.182.427.284.683.284h9.988c.256 0 .501-.102.683-.284l4.385-4.385a.965.965 0 0 0 .284-.683V7.234c0-.256-.102-.501-.284-.683zm-5.068 7.37H7.006V10.08h9.988v3.841z"/></svg>
                         HackerRank
                     </a>
                 </div>
             </div>
-            <div class="hero-right">
-                <div class="photo-container">
-                    <div class="photo-inner">
-                        <img src="profile.jpg" alt="Likith B">
+
+            <div class="hero-visual">
+                <div class="avatar-card-wrapper">
+                    <div class="avatar-halo"></div>
+                    <div class="avatar-frame">
+                        <img src="profile.jpg" alt="Likith B" class="avatar-img">
+                    </div>
+                    
+                    <div class="float-tag float-tag-1">
+                        <span>📍</span> Bangalore, India
+                    </div>
+                    
+                    <div class="float-tag float-tag-2">
+                        <span>⚡</span> C++ & Python
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION -->
+    <!-- ABOUT ME: BENTO GRID -->
     <section class="section-padding" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Biography</h3>
-                    <p class="about-bio">A dedicated 3rd-year AI/ML student who transitioned from a fascination with core software engineering to specialized machine learning systems and algorithmic design. Active in building research-backed projects and mastering complex data structures.</p>
-                    
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <h4>Career Objective</h4>
-                            <p>To secure an AI/ML internship or research fellowship where I can apply deep learning concepts, build experimental pipelines, and collaborate on cutting-edge solutions.</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4>Interests</h4>
-                            <p>Deep Learning, Natural Language Processing, and Software Architecture.</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4>Strengths</h4>
-                            <p>Strong mathematical intuition, logical and analytical problem-solving, rapid adaptation to new tools, and clean coding practices.</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4>Future Goals</h4>
-                            <p>Contributing to impactful open-source AI projects, publishing research at top ML conferences, and building models that solve critical industry challenges.</p>
-                        </div>
-                    </div>
+            <div class="section-header">
+                <span class="section-kicker">// Profile & Focus</span>
+                <h2 class="section-title">Architecting the Future of AI Systems</h2>
+                <p class="section-subtitle">Bridging theoretical neural concepts with production-grade engineering.</p>
+            </div>
 
-                    <div class="about-quote">
+            <div class="bento-grid">
+                
+                <!-- Main Narrative Card (Span 8) -->
+                <div class="bento-card bento-col-8 spotlight-card">
+                    <div>
+                        <div class="bento-card-header">
+                            <span class="section-kicker" style="margin-bottom: 0;">Biography</span>
+                            <div class="bento-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="bento-title">Curiosity-Driven AI Practitioner</h3>
+                        <p class="bento-text">
+                            A dedicated 3rd-year AI/ML student who transitioned from a fascination with core software engineering to specialized machine learning systems and algorithmic design. Active in building research-backed projects and mastering complex data structures.
+                        </p>
+                        <p class="bento-text" style="margin-top: 0.85rem;">
+                            My career objective is to secure an AI/ML internship or research fellowship where I can apply deep learning concepts, build experimental pipelines, and collaborate on cutting-edge solutions.
+                        </p>
+                    </div>
+                    <div class="quote-box">
                         "Understand the underlying mathematics, write clean and efficient code, and iterate relentlessly."
                     </div>
                 </div>
 
-                <!-- TIMELINE -->
-                <div class="about-timeline">
-                    <h3 class="timeline-title">Developer Journey</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <span class="timeline-date">2022 — 2024</span>
-                            <div class="timeline-content">
-                                <h4>Pre-University College (12th / PUC)</h4>
-                                <p>Studied Science Stream (PCMB) at Surana Independent P.U College. Graduated with a high distinction of 94.5%.</p>
-                            </div>
+                <!-- Metric 1: Academic Distinction (Span 4) -->
+                <div class="bento-card bento-col-4 spotlight-card">
+                    <div class="bento-card-header">
+                        <span class="section-kicker" style="margin-bottom: 0;">Academic Standing</span>
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <span class="timeline-date">2024</span>
-                            <div class="timeline-content">
-                                <h4>B.Tech in AI & ML</h4>
-                                <p>Began engineering degree in Artificial Intelligence and Machine Learning at Alliance University, Bangalore.</p>
-                            </div>
+                    </div>
+                    <div>
+                        <div class="stat-number">94.5%</div>
+                        <div class="stat-label">Distinction in 12th / PUC</div>
+                        <p class="bento-text" style="margin-top: 0.5rem; font-size: 0.85rem;">
+                            Graduated with high academic performance in Science stream (PCMB) at Surana Independent P.U College.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Metric 2: Shipped AI Systems (Span 4) -->
+                <div class="bento-card bento-col-4 spotlight-card">
+                    <div class="bento-card-header">
+                        <span class="section-kicker" style="margin-bottom: 0;">Portfolio</span>
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <span class="timeline-date">June 2026</span>
-                            <div class="timeline-content">
-                                <h4>Built PromptDNA</h4>
-                                <p>Created an AI-powered prompt coaching dashboard evaluating, scoring (0-100), and optimizing prompts with LLaMA 3.</p>
-                            </div>
+                    </div>
+                    <div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Flagship Full-Stack AI Apps</div>
+                        <p class="bento-text" style="margin-top: 0.5rem; font-size: 0.85rem;">
+                            End-to-end built systems leveraging Vector Databases, RAG, and multi-dimensional LLM analytics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Metric 3: Certifications (Span 4) -->
+                <div class="bento-card bento-col-4 spotlight-card">
+                    <div class="bento-card-header">
+                        <span class="section-kicker" style="margin-bottom: 0;">Credentials</span>
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <span class="timeline-date">July 2026</span>
-                            <div class="timeline-content">
-                                <h4>Built MemoryOS</h4>
-                                <p>Developed an AI-powered semantic second brain featuring vector search (ChromaDB), RAG chat (LLaMA 3.3), and auto-tagging.</p>
-                            </div>
+                    </div>
+                    <div>
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Verified Certifications</div>
+                        <p class="bento-text" style="margin-top: 0.5rem; font-size: 0.85rem;">
+                            Certified across Oracle Cloud AI Foundations, Deloitte Data Analytics, TCS, and NPTEL DSA/DBMS.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strengths & Core Domains (Span 4) -->
+                <div class="bento-card bento-col-4 spotlight-card">
+                    <div class="bento-card-header">
+                        <span class="section-kicker" style="margin-bottom: 0;">Core Strengths</span>
+                        <div class="bento-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                    </div>
+                    <div class="strengths-grid">
+                        <div class="strength-item">
+                            <span class="strength-bullet"></span> Math Intuition
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-bullet"></span> Algorithmic Logic
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-bullet"></span> Clean Code
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-bullet"></span> Rapid Prototyping
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section class="section-padding" id="skills" style="background-color: var(--bg-secondary);">
+    <!-- SKILLS SECTION: INTERACTIVE MATRIX -->
+    <section class="section-padding" id="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
+            <div class="section-header">
+                <span class="section-kicker">// Core Arsenal</span>
+                <h2 class="section-title">Technical Skills & Tooling</h2>
+                <p class="section-subtitle">Categorized competencies in software engineering and machine learning.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="skills-filter-nav">
+                <button class="filter-btn active" onclick="filterSkills('all', this)">All Technologies</button>
+                <button class="filter-btn" onclick="filterSkills('languages', this)">Programming</button>
+                <button class="filter-btn" onclick="filterSkills('aiml', this)">AI & Data Science</button>
+                <button class="filter-btn" onclick="filterSkills('frameworks', this)">Libraries</button>
+                <button class="filter-btn" onclick="filterSkills('tools', this)">Databases & Tools</button>
+            </div>
+
+            <!-- Skills Wrapper -->
+            <div class="skills-wrapper">
                 
-                <!-- Category 1: Languages -->
-                <div class="skills-category glass-card">
-                    <h3>Programming Languages</h3>
-                    <div class="skills-cloud">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
+                <!-- Programming Languages -->
+                <div class="skill-pill" data-category="languages">
+                    <span>🐍 Python</span>
+                    <span class="skill-level-tag">Advanced (3 yrs)</span>
+                </div>
+                <div class="skill-pill" data-category="languages">
+                    <span>⚡ C++</span>
+                    <span class="skill-level-tag">Advanced (3 yrs)</span>
+                </div>
+                <div class="skill-pill" data-category="languages">
+                    <span>🗄️ SQL</span>
+                    <span class="skill-level-tag">Intermediate (2 yrs)</span>
                 </div>
 
-                <!-- Category 2: AI/ML -->
-                <div class="skills-category glass-card">
-                    <h3>AI/ML & Data Science</h3>
-                    <div class="skills-cloud">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Supervised & Unsupervised</span>
-                        <span class="skill-tag">Regression & Classification</span>
-                        <span class="skill-tag">Data Cleaning & Feature Engineering</span>
-                    </div>
+                <!-- AI/ML & Data Science -->
+                <div class="skill-pill" data-category="aiml">
+                    <span>🤖 Machine Learning</span>
+                    <span class="skill-level-tag">Supervised & Unsupervised</span>
+                </div>
+                <div class="skill-pill" data-category="aiml">
+                    <span>📈 Regression & Classification</span>
+                    <span class="skill-level-tag">Algorithmic</span>
+                </div>
+                <div class="skill-pill" data-category="aiml">
+                    <span>📊 Data Analysis & Visualization</span>
+                    <span class="skill-level-tag">Feature Engineering</span>
                 </div>
 
-                <!-- Category 3: Frameworks -->
-                <div class="skills-category glass-card">
-                    <h3>Libraries & Frameworks</h3>
-                    <div class="skills-cloud">
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                    </div>
+                <!-- Frameworks & Libraries -->
+                <div class="skill-pill" data-category="frameworks">
+                    <span>🐼 Pandas</span>
+                    <span class="skill-level-tag">Data Wrangling</span>
+                </div>
+                <div class="skill-pill" data-category="frameworks">
+                    <span>🔢 NumPy</span>
+                    <span class="skill-level-tag">Array Computing</span>
+                </div>
+                <div class="skill-pill" data-category="frameworks">
+                    <span>📉 Matplotlib</span>
+                    <span class="skill-level-tag">Plotting</span>
+                </div>
+                <div class="skill-pill" data-category="frameworks">
+                    <span>🎨 Seaborn</span>
+                    <span class="skill-level-tag">Statistical Viz</span>
                 </div>
 
-                <!-- Category 4: Databases & Tools -->
-                <div class="skills-category glass-card">
-                    <h3>Databases & Tools</h3>
-                    <div class="skills-cloud">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Jupyter Notebook</span>
-                        <span class="skill-tag">Google Colab</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
+                <!-- Databases & Tools -->
+                <div class="skill-pill" data-category="tools">
+                    <span>🐬 MySQL</span>
+                    <span class="skill-level-tag">Relational DB</span>
+                </div>
+                <div class="skill-pill" data-category="tools">
+                    <span>📓 Jupyter Notebooks</span>
+                    <span class="skill-level-tag">Interactive Dev</span>
+                </div>
+                <div class="skill-pill" data-category="tools">
+                    <span>☁️ Google Colab</span>
+                    <span class="skill-level-tag">GPU Accelerators</span>
+                </div>
+                <div class="skill-pill" data-category="tools">
+                    <span>💻 VS Code</span>
+                    <span class="skill-level-tag">Core IDE</span>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS: BENTO SHOWCASE -->
     <section class="section-padding" id="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
+            <div class="section-header">
+                <span class="section-kicker">// Production Work</span>
+                <h2 class="section-title">Featured Flagship Projects</h2>
+                <p class="section-subtitle">Real-world AI systems built, optimized, and deployed.</p>
+            </div>
+
+            <div class="projects-container">
                 
                 <!-- Project 1: MemoryOS -->
-                <div class="project-card glass-card">
-                    <div class="project-media">
-                        <img src="memory_os.png" alt="MemoryOS Landing Page">
+                <div class="spotlight-card project-bento">
+                    <div class="project-preview">
+                        <img src="memory_os.png" alt="MemoryOS AI Second Brain Platform">
                     </div>
-                    <div class="project-meta">
-                        <span class="project-category">Full-Stack AI & Knowledge Management</span>
-                        <h3>MemoryOS</h3>
-                        <p class="project-desc">An AI-powered contextual semantic memory retrieval system that processes and indexes notes, PDFs, code, and web articles. It behaves as a personal "second brain" using natural language search.</p>
-                        <ul class="project-features">
-                            <li>Semantic Search using sentence-transformers (all-MiniLM-L6-v2) and cosine similarity.</li>
-                            <li>RAG (Retrieval-Augmented Generation) Chat using Groq API with LLaMA 3.3 70B.</li>
-                            <li>Exam Revision Flashcard mode featuring AI-generated explanations at easy/medium/hard difficulties.</li>
-                            <li>JWT authentication and per-user vector data isolation.</li>
+                    <div class="project-info">
+                        <span class="project-tag">Full-Stack AI & Vector Retrieval</span>
+                        <h3 class="project-heading">MemoryOS</h3>
+                        <p class="project-desc">
+                            An AI-powered contextual semantic memory retrieval system that processes and indexes notes, PDFs, code snippets, and web articles. Functions as an intelligent second brain retrieving by semantic meaning rather than simple keywords.
+                        </p>
+                        
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span><strong>Semantic Vector Search:</strong> Sentence-transformers (384-dim embeddings) & ChromaDB cosine similarity.</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span><strong>RAG Chat Engine:</strong> Retrieval-Augmented Generation powered by Groq LLaMA 3.3 70B.</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span><strong>Study Flashcards & Kanban:</strong> Exam revision difficulty engine with user vector isolation.</span>
+                            </li>
                         </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js 14</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">ChromaDB</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Groq LLaMA</span>
+
+                        <div class="tech-stack-row">
+                            <span class="tech-chip">Next.js 14</span>
+                            <span class="tech-chip">FastAPI</span>
+                            <span class="tech-chip">Python</span>
+                            <span class="tech-chip">ChromaDB</span>
+                            <span class="tech-chip">PostgreSQL</span>
+                            <span class="tech-chip">Groq LLaMA</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Likith11011/Memory-OS" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">GitHub</a>
-                            <a href="https://memory-os-4pyc.vercel.app" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Live Demo</a>
+
+                        <div class="project-links-row">
+                            <a href="https://memory-os-4pyc.vercel.app" target="_blank" class="btn btn-primary">
+                                Launch Live Demo
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                            <a href="https://github.com/Likith11011/Memory-OS" target="_blank" class="btn btn-secondary">
+                                View Source
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: PromptDNA -->
-                <div class="project-card glass-card">
-                    <div class="project-media">
-                        <img src="prompt_dna.png" alt="PromptDNA Landing Page">
+                <div class="spotlight-card project-bento project-bento-reverse">
+                    <div class="project-preview">
+                        <img src="prompt_dna.png" alt="PromptDNA AI Prompt Intelligence Platform">
                     </div>
-                    <div class="project-meta">
-                        <span class="project-category">AI Developer Tools & Analytics</span>
-                        <h3>PromptDNA</h3>
-                        <p class="project-desc">An AI-powered prompt intelligence system and coach that evaluates, scores, and refines user prompts to maximize LLM communication efficiency.</p>
-                        <ul class="project-features">
-                            <li>Multi-dimensional Prompt Scoring (0-100) combining heuristic rules with LLM grading.</li>
-                            <li>Weakness Heatmap tracking and user prompt persona classification.</li>
-                            <li>Prompt Optimizer converting loose language into highly explicit instruction templates.</li>
-                            <li>Analytics dashboard demonstrating score progression trends.</li>
+                    <div class="project-info">
+                        <span class="project-tag">AI Developer Tools & Analytics</span>
+                        <h3 class="project-heading">PromptDNA</h3>
+                        <p class="project-desc">
+                            An AI-powered prompt intelligence system and fitness tracker for LLM communication. Analyzes, scores, and refines prompts across key dimensions to turn loose natural language into high-precision prompt templates.
+                        </p>
+                        
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span><strong>Hybrid Scoring (0-100):</strong> Combines deterministic heuristic rules with qualitative LLM evaluations.</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span><strong>Weakness Heatmap & Persona:</strong> Detects recurring prompting mistakes and assigns behavioral archetypes.</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-check">✓</span>
+                                <span><strong>Automated Optimizer:</strong> Rewrites weak prompts into optimized high-performance instructions.</span>
+                            </li>
                         </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">LLaMA 3</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Python</span>
+
+                        <div class="tech-stack-row">
+                            <span class="tech-chip">Next.js</span>
+                            <span class="tech-chip">FastAPI</span>
+                            <span class="tech-chip">LLaMA 3</span>
+                            <span class="tech-chip">PostgreSQL</span>
+                            <span class="tech-chip">Python</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Likith11011/PromptDNA" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">GitHub</a>
-                            <a href="https://prompt-dna-pi.vercel.app" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Live Demo</a>
+
+                        <div class="project-links-row">
+                            <a href="https://prompt-dna-pi.vercel.app" target="_blank" class="btn btn-primary">
+                                Launch Live Demo
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                            <a href="https://github.com/Likith11011/PromptDNA" target="_blank" class="btn btn-secondary">
+                                View Source
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -269,137 +426,186 @@
         </div>
     </section>
 
-    <!-- EDUCATION & CERTIFICATIONS -->
-    <section class="section-padding" id="education" style="background-color: var(--bg-secondary);">
-        <div class="container edu-cert-grid">
-            
-            <!-- Education Column -->
-            <div class="edu-column">
-                <h2 class="section-title">Education</h2>
+    <!-- DEVELOPER JOURNEY: TIMELINE -->
+    <section class="section-padding" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">// Milestones</span>
+                <h2 class="section-title">Developer Journey</h2>
+                <p class="section-subtitle">A chronological record of education, projects, and growth.</p>
+            </div>
+
+            <div class="timeline-track">
                 
-                <div class="edu-card glass-card">
-                    <div class="edu-header">
-                        <span class="edu-degree">B.Tech in AI & ML</span>
-                        <span class="edu-duration">2024 - 2028</span>
-                    </div>
-                    <div class="edu-institution">Alliance University, Bangalore</div>
-                    <div class="edu-details">
-                        <p>Currently studying Artificial Intelligence & Machine Learning engineering principles.</p>
-                        <p><strong>Core Coursework:</strong> Data Structures & Algorithms, Machine Learning, Database Management Systems</p>
+                <div class="timeline-node">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card spotlight-card">
+                        <span class="timeline-date">2022 — 2024</span>
+                        <h4 class="timeline-heading">Pre-University Course (12th / PUC)</h4>
+                        <p class="timeline-body">Studied Science Stream (PCMB) at Surana Independent P.U College, graduating with an exceptional distinction of 94.5%.</p>
                     </div>
                 </div>
 
-                <div class="edu-card glass-card">
-                    <div class="edu-header">
-                        <span class="edu-degree">Pre-University Course (12th)</span>
-                        <span class="edu-duration">2022 - 2024</span>
-                    </div>
-                    <div class="edu-institution">Surana Independent P.U College, Bangalore</div>
-                    <div class="edu-details">
-                        <p>Graduated with Pre-University certification in Science stream (PCMB).</p>
-                        <p><strong>Score:</strong> 94.5% overall percentage</p>
+                <div class="timeline-node">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card spotlight-card">
+                        <span class="timeline-date">2024 — 2028</span>
+                        <h4 class="timeline-heading">B.Tech in Artificial Intelligence & Machine Learning</h4>
+                        <p class="timeline-body">Commenced engineering degree at Alliance University, Bangalore, focusing on algorithms, deep learning, and software architecture.</p>
                     </div>
                 </div>
+
+                <div class="timeline-node">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card spotlight-card">
+                        <span class="timeline-date">June 2026</span>
+                        <h4 class="timeline-heading">Engineered PromptDNA</h4>
+                        <p class="timeline-body">Designed and published an AI prompt intelligence coach featuring 0-100 hybrid scoring and user behavioral archetype classification.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-node">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card spotlight-card">
+                        <span class="timeline-date">July 2026</span>
+                        <h4 class="timeline-heading">Engineered MemoryOS</h4>
+                        <p class="timeline-body">Constructed a second-brain semantic retrieval platform integrating Sentence-Transformers embeddings, ChromaDB vector indexing, and Groq LLaMA 3.3.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENTIALS: 3-COLUMN GRID -->
+    <section class="section-padding" id="credentials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">// Qualifications</span>
+                <h2 class="section-title">Education, Certifications & Achievements</h2>
+                <p class="section-subtitle">Academic foundations, verified industry credentials, and milestones.</p>
             </div>
 
-            <!-- Certifications Column -->
-            <div class="cert-column" id="certifications">
-                <h2 class="section-title">Certifications</h2>
-                <div class="cert-grid">
-                    
-                    <div class="cert-card glass-card">
-                        <div class="cert-icon">1</div>
-                        <div class="cert-info">
-                            <h4>OCI 2025 Certified AI Foundations Associate</h4>
-                            <p>Issued by <strong>Oracle</strong> • 2025</p>
+            <div class="tri-grid">
+                
+                <!-- Education Column -->
+                <div>
+                    <h3 class="column-header">
+                        <span>🎓</span> Education
+                    </h3>
+                    <div class="card-stack">
+                        <div class="tri-card spotlight-card">
+                            <span class="tri-card-badge">2024 — 2028</span>
+                            <div class="tri-card-title">B.Tech in AI & ML</div>
+                            <div class="tri-card-sub">Alliance University, Bangalore</div>
+                            <div class="tri-card-desc">DSA, Machine Learning, Database Management Systems.</div>
                         </div>
-                    </div>
 
-                    <div class="cert-card glass-card">
-                        <div class="cert-icon">2</div>
-                        <div class="cert-info">
-                            <h4>Data Analytics Job Simulation</h4>
-                            <p>Issued by <strong>Deloitte (via Forage)</strong> • 2026</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card glass-card">
-                        <div class="cert-icon">3</div>
-                        <div class="cert-info">
-                            <h4>TCS iON Career Edge – Young Professional</h4>
-                            <p>Issued by <strong>TCS</strong> • 2026</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card glass-card">
-                        <div class="cert-icon">4</div>
-                        <div class="cert-info">
-                            <h4>Data Structures and Algorithms</h4>
-                            <p>Issued by <strong>NPTEL</strong> • 2026</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card glass-card">
-                        <div class="cert-icon">5</div>
-                        <div class="cert-info">
-                            <h4>Introduction to Database Systems</h4>
-                            <p>Issued by <strong>NPTEL</strong> • 2026</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Achievements Column -->
-            <div class="achievements-column" id="achievements">
-                <h2 class="section-title">Achievements</h2>
-                <div class="cert-grid">
-                    <div class="cert-card glass-card">
-                        <div class="cert-icon">★</div>
-                        <div class="cert-info">
-                            <h4>MemoryVerse AI 2026</h4>
-                            <p>Participated in challenge organised by <strong>Unstop</strong> • 2026</p>
+                        <div class="tri-card spotlight-card">
+                            <span class="tri-card-badge">2022 — 2024</span>
+                            <div class="tri-card-title">Pre-University Course (12th)</div>
+                            <div class="tri-card-sub">Surana Independent P.U College</div>
+                            <div class="tri-card-desc">Science Stream (PCMB) • <strong>94.5% Distinction</strong></div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <!-- Certifications Column -->
+                <div>
+                    <h3 class="column-header">
+                        <span>📜</span> Certifications
+                    </h3>
+                    <div class="card-stack">
+                        <div class="tri-card spotlight-card">
+                            <div class="tri-card-title">OCI 2025 Certified AI Foundations Associate</div>
+                            <div class="tri-card-sub">Oracle • 2025</div>
+                        </div>
+
+                        <div class="tri-card spotlight-card">
+                            <div class="tri-card-title">Data Analytics Job Simulation</div>
+                            <div class="tri-card-sub">Deloitte (via Forage) • 2026</div>
+                        </div>
+
+                        <div class="tri-card spotlight-card">
+                            <div class="tri-card-title">TCS iON Career Edge – Young Professional</div>
+                            <div class="tri-card-sub">TCS • 2026</div>
+                        </div>
+
+                        <div class="tri-card spotlight-card">
+                            <div class="tri-card-title">Data Structures and Algorithms</div>
+                            <div class="tri-card-sub">NPTEL • 2026</div>
+                        </div>
+
+                        <div class="tri-card spotlight-card">
+                            <div class="tri-card-title">Introduction to Database Systems</div>
+                            <div class="tri-card-sub">NPTEL • 2026</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Column -->
+                <div>
+                    <h3 class="column-header">
+                        <span>🏆</span> Achievements
+                    </h3>
+                    <div class="card-stack">
+                        <div class="tri-card spotlight-card">
+                            <span class="tri-card-badge">Hackathons & AI Challenges</span>
+                            <div class="tri-card-title">MemoryVerse AI 2026</div>
+                            <div class="tri-card-sub">Organised by Unstop • 2026</div>
+                            <div class="tri-card-desc">Participated in skill-based national challenge with verified proof-of-work submission.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section class="section-padding" id="contact">
-        <div class="container contact-container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-text">I am always open to exploring AI/ML research opportunities, internships, and project collaborations. Feel free to reach out via my email or connect on LinkedIn!</p>
-            <div class="contact-buttons">
-                <a href="mailto:likith301206@gmail.com" class="btn btn-primary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    Send Email
-                </a>
-                <a href="https://linkedin.com/in/likith-b-10206b333" target="_blank" class="btn btn-secondary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; vertical-align: middle;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                    LinkedIn Profile
-                </a>
+        <div class="container">
+            <div class="contact-box spotlight-card">
+                <span class="section-kicker">// Get in Touch</span>
+                <h2 class="contact-heading">Let's Build Something Intelligent.</h2>
+                <p class="contact-desc">
+                    I am actively open to AI/ML research fellowships, engineering internships, and collaborative software projects. Feel free to connect directly.
+                </p>
+                
+                <div class="contact-actions">
+                    <a href="mailto:likith301206@gmail.com" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        likith301206@gmail.com
+                    </a>
+                    <a href="https://linkedin.com/in/likith-b-10206b333" target="_blank" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn Profile
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="footer-logo">Likith B</div>
-            <p class="footer-text">&copy; 2026 Likith B. All rights reserved.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">Likith B</div>
+            <div class="footer-meta">
+                &copy; 2026 Likith B. Crafted for AI & Machine Learning Research.
+            </div>
         </div>
     </footer>
 
-    <!-- RESUME MODAL PREVIEW -->
+    <!-- RESUME MODAL VIEWER -->
     <div class="modal-overlay" id="resumeModal" onclick="closeResumeModal(event)">
         <div class="modal-container" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <h3 class="modal-title">Likith B - Resume</h3>
-                <div class="modal-controls">
-                    <button class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem; border-radius: 6px;" onclick="printResume()">Print / Save PDF</button>
+                <h3 class="modal-title">Likith B — ATS Resume Preview</h3>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.825rem;" onclick="printResume()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                        Print / Save PDF
+                    </button>
                     <button class="close-btn" onclick="toggleModal(false)">&times;</button>
                 </div>
             </div>
@@ -409,7 +615,15 @@
         </div>
     </div>
 
-    <!-- JS LOGIC -->
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-container" id="toastContainer">
+        <div class="toast" id="toast">
+            <span style="color: var(--accent-cyan); font-size: 1.1rem;">✓</span>
+            <span id="toastMessage">Email address copied to clipboard!</span>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script src="script.js"></script>
 </body>
 </html>
